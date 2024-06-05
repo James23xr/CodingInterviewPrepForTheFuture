@@ -1,7 +1,3 @@
-Sure, let's adjust the README to reflect that structure, where each folder contains a different LeetCode question:
-
----
-
 # LeetCode Solutions
 
 Welcome to the LeetCode Solutions repository! This repository contains solutions to various LeetCode problems. The solutions are written in Python and are organized by problem.
