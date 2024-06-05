@@ -3,9 +3,6 @@ class Solution:
         results = []
         for char in set(words[0]):
             count = min(word.count(char) for word in words)
-            results += [char]* count
+            results += [char] * count
         return results
-
-
-        
         
