@@ -42,7 +42,7 @@ Example structure:
 Contributions are welcome! If you have a solution to a problem that is not yet in the repository or if you can improve an existing solution, feel free to create a pull request. Please ensure that your contribution includes:
 
 1. The problem statement in the `README.md`.
-2. A clear and concise solution in `solution.py`.
+2. A clear and concise solution in `solution.py.`
 
 
 ## License
@@ -51,4 +51,4 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 
 ---
 
-Happy coding and good luck with your interview preparation! If you have any questions or suggestions, feel free to open an issue or contact me directly.
+Happy coding, and good luck with your interview preparation! If you have any questions or suggestions, feel free to open an issue or contact me directly.
