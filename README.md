@@ -18,7 +18,7 @@ This repository is designed to help you prepare for coding interviews by providi
 
 Each folder in the repository corresponds to a different LeetCode problem and is named using the problem title and number. Inside each folder, you will find:
 
-- `README.md`: Contains the problem statement and a brief explanation of the solution.
+- `README.md`: Contains the problem statement.
 - `solution.py`: Contains the Python solution to the problem.
 
 Example structure:
