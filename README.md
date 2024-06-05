@@ -41,34 +41,13 @@ Example structure:
 └── ...
 ```
 
-## Getting Started
-
-To get started with this repository, clone it to your local machine using the following command:
-
-```bash
-git clone https://github.com/yourusername/leetcode-solutions.git
-```
-
-Navigate to the directory of the problem you want to study:
-
-```bash
-cd leetcode-solutions/0001-two-sum
-```
-
-Open the solution file to view the problem statement and the solution:
-
-```bash
-cat solution.py
-```
-
 ## Contributing
 
 Contributions are welcome! If you have a solution to a problem that is not yet in the repository or if you can improve an existing solution, feel free to create a pull request. Please ensure that your contribution includes:
 
 1. The problem statement in the `README.md`.
 2. A clear and concise solution in `solution.py`.
-3. An explanation of your approach in the `README.md`.
-4. The time and space complexity of your solution in the `README.md`.
+
 
 ## License
 
