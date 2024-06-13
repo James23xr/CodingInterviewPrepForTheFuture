@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution:
     def getMinValueFromRight(self, arr):
         res = []
         currMin = float('inf')
@@ -19,5 +19,4 @@ class Solution(object):
                 maxChunks += 1
 
         return maxChunks
-
 
