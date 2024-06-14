@@ -5,5 +5,3 @@ class Solution:
             for i in range(len(nums)):
                 ans.append(nums[i])
         return ans
-        
-        
