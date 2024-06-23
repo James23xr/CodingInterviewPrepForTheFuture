@@ -1,4 +1,3 @@
-# Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
 #         self.val = val
@@ -10,6 +9,6 @@ class Solution:
         while curr:
             nxt = curr.next
             curr.next = prev
-            prev =curr
+            prev = curr
             curr = nxt
         return prev
