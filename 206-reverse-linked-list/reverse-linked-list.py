@@ -10,8 +10,6 @@ class Solution:
         while curr:
             nxt = curr.next
             curr.next = prev
-            prev = curr
+            prev =curr
             curr = nxt
         return prev
-
-
