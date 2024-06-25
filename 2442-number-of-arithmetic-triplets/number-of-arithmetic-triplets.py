@@ -5,8 +5,8 @@ class Solution:
         for i in range(len(nums)):
             seen[nums[i]] = i
         for num in nums:
-            if (num + diff) in seen and (num + diff*2) in seen:
-                counter+=1
+            if (num + diff) in seen and (num + diff+diff) in seen:
+                counter += 1
         return counter
 
 
