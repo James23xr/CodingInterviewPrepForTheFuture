@@ -11,7 +11,5 @@ class Solution:
         :rtype: void Do not return anything, modify node in-place instead.
         """
         node.val = node.next.val
-        node.next = node.next.next
-
-
+        node.next= node.next.next
         
