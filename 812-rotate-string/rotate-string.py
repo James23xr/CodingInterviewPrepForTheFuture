@@ -3,6 +3,8 @@ class Solution:
         if len(s) != len(goal):
             return False
         if goal in (s+s):
-            return True
+            return True 
+        else:
+            return False
 
         
