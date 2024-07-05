@@ -3,7 +3,6 @@ class MyStack:
     def __init__(self):
         self.q = deque()
         
-
     def push(self, x: int) -> None:
         self.q.append(x)
 
@@ -17,10 +16,7 @@ class MyStack:
         
 
     def empty(self) -> bool:
-        if not self.q:
-            return True
-        else:
-            return False
+        return len(self.q) == 0
         
 
 
