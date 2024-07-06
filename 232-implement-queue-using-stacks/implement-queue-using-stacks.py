@@ -15,4 +15,7 @@ class MyQueue:
                 self.s2.append(self.s1.pop())
         return self.s2[-1]
     def empty(self) -> bool:
-        return len(self.s1) == 0 and len(self.s2) == 0
+        if not self.s2 and not self.s1:
+            return True
+        else:
+            return False
