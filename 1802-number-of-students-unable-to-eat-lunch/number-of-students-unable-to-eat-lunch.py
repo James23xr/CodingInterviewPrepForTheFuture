@@ -3,10 +3,9 @@ class Solution:
         res = len(students)
         count = Counter(students)
         for s in sandwiches:
-            if count[s]>0:
-                res -= 1
+            if count[s] > 0:
                 count[s] -= 1
+                res -= 1
             else:
                 return res
         return res
-
