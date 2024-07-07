@@ -4,9 +4,9 @@ class Solution:
         for i,n in enumerate(nums):
             diff = target - n
             if diff in Map:
-                return [i,Map[diff]]
+                return [Map[diff],i]
             Map[n] = i
-        return False
+
 
 
         
