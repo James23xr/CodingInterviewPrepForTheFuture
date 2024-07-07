@@ -5,8 +5,4 @@ class Solution:
             diff = target - n
             if diff in Map:
                 return [Map[diff],i]
-            Map[n] = i
-
-
-
-        
+            Map[n] = i        
