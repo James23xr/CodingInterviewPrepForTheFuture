@@ -4,6 +4,6 @@ class Solution:
         for i,e in enumerate(nums):
             diff = target - e
             if diff in Map:
-                return [Map[diff], i]
+                return [Map[diff],i]
             Map[e] = i
         
