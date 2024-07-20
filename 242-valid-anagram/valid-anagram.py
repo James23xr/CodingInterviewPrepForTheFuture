@@ -1,6 +1,5 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        return Counter(s) == Counter(t)
         if len(s) != len(t):
             return False
         countS, countT = {},{}
@@ -11,7 +10,3 @@ class Solution:
             if countS[c] != countT.get(c,0):
                 return False
         return True
-
-
-        
-        
