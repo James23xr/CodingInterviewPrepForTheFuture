@@ -4,8 +4,5 @@ class Solution:
         for i in range(len(nums)):
             diff = target - nums[i]
             if diff in Map:
-                return [Map[diff],i]
+                return[Map[diff],i]
             Map[nums[i]] = i
-
-        
-        
