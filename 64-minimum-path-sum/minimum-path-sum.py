@@ -16,4 +16,3 @@ class Solution:
         
         return grid[-1][-1]
     
-        # An Upvote will be encouraging
