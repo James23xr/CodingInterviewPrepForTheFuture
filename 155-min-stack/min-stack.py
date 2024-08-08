@@ -15,7 +15,7 @@ class MinStack:
 
     def pop(self) -> None:
         self.minstack.pop()
-        return self.stack.pop()
+        self.stack.pop()
 
         
 
