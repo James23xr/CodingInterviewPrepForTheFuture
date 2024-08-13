@@ -1,17 +1,16 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        has = {"}":"{",")":"(","]":"["}
         stack = []
-        if len(s) <=1:
-            return False
+        Map = {"}":"{","]":"[",")":"("}
         for char in s:
-            if char in has:
-                if stack and has[char] == stack[-1]:
+            if len(s) <= 1:
+                return False
+            if char in Map:
+                if stack and stack[-1] == Map[char]:
                     stack.pop()
                 else:
                     return False
             else:
                 stack.append(char)
         return len(stack) == 0
-
         
