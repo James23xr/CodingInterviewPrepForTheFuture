@@ -3,7 +3,7 @@ class Solution:
     set_nums = set(nums)
     maxlength = 0
 
-    for n in nums:
+    for n in set_nums:
       if (n-1) not in set_nums:
         length = 0
   
