@@ -8,7 +8,7 @@ class Solution:
                 r-=1
             elif sum < target:
                 l+=1
-            elif sum == target:
+            else:
                 return [l+1,r+1]
         
 
