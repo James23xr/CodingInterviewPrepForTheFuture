@@ -5,12 +5,9 @@ class Solution:
         countS = defaultdict(int)
         countT = defaultdict(int)
         for i in range(len(s)):
-            countS[s[i]] = countS.get(s[i],0) + 1
-            countT[t[i]] = countT.get(t[i],0) + 1
-        for char in countS:
+            countS[s[i]] = 1 + countS.get(s[i],0)
+            countT[t[i]] = 1 + countT.get(t[i],0)
+        for char in s:
             if countS[char] != countT.get(char,0):
                 return False
         return True
-
-
-        
