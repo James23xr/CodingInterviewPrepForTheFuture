@@ -3,9 +3,9 @@ class Solution:
         maxsum = nums[0]
         cursum = 0
         for num in nums:
-            if cursum <0:
+            if cursum < 0:
                 cursum = 0
-            if cursum >= 0:
-                cursum += num
+            cursum += num
             maxsum = max(maxsum,cursum)
         return maxsum
+        
