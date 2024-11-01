@@ -1,38 +1,31 @@
 class Solution:
     def isNumber(self, s: str) -> bool:
-        s = s.strip()  # Trim any whitespace from the ends
+        s = s.strip()
         n = len(s)
-        
-        has_num = False       # To ensure at least one digit
-        has_decimal = False   # To allow only one decimal point before 'e' or 'E'
-        has_exponent = False  # To allow only one 'e' or 'E'
+        has_num = False
+        has_dec = False
+        has_exp = False
         
         for i in range(n):
             char = s[i]
-            
             if char.isdigit():
                 has_num = True
-                
-            elif char in ['+', '-']:
-                # Sign can only appear at the start or immediately after 'e' or 'E'
-                if i > 0 and s[i - 1] not in ['e', 'E']:
+            elif char in ['+','-']:
+                if i > 0 and s[i-1] not in ['e','E']:
                     return False
-                    
             elif char == '.':
-                # Decimal point can only appear before the exponent and must appear once
-                if has_decimal or has_exponent:
+                if  has_dec or has_exp:
                     return False
-                has_decimal = True
-                
-            elif char in ['e', 'E']:
-                # Exponent can only appear once and only if there has been a number before it
-                if has_exponent or not has_num:
+                has_dec = True
+            elif char in ['e','E']:
+                if has_exp or  not has_num:
                     return False
-                has_exponent = True
-                has_num = False  # Reset has_num to ensure there are digits after 'e'
-                
+                has_exp = True
+                has_num = False
             else:
-                # If the character is anything else, it's invalid
                 return False
-        
         return has_num
+                
+
+
+        
