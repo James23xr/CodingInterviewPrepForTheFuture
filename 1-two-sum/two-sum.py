@@ -7,4 +7,3 @@ class Solution:
                 return [seen[diff],i]
             seen[e] = i
         
-        
