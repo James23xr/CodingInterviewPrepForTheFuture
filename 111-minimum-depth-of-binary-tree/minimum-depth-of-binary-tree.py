@@ -13,6 +13,7 @@ class Solution:
                 return dfs(root.right) + 1
             elif root.right is None:
                 return dfs(root.left) + 1
-            return min(dfs(root.left),dfs(root.right)) + 1
+            else:
+                return min(dfs(root.left),dfs(root.right)) + 1
         return dfs(root)
         
