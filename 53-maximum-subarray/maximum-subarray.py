@@ -6,6 +6,5 @@ class Solution:
             if cursum < 0:
                 cursum = 0
             cursum += num
-            maxsum = max(maxsum,cursum)
+            maxsum = max(cursum,maxsum)
         return maxsum
-        
