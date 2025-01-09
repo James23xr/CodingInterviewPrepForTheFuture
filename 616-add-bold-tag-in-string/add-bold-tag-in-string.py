@@ -1,29 +1,29 @@
 class Solution:
     def addBoldTag(self, s: str, words: List[str]) -> str:
-        n = len(s)
-        bold = [False] * n # if s ='abcxyz123' bold = 9 False statements in an array [F,F,F,F,F,F,F,F]
-        for i in range(n):
-            for word in words:
-                if s.startswith(word,i):
-                    for j in range(i,min(i+len(word),n)):
-                        bold[j] = True
-            result = []
+        bold_status = [False]*len(s)
+        for word in words:
+            start = s.find(word)
+            length = len(word)
+            while start != -1:
+                for i in range(start, start + length):
+                    bold_status[i] = True
+                start = s.find(word, start+1)
+        
         i = 0
-        while i < n:
-            if bold[i]:
-                # Start of a bold section
-                result.append("<b>")
-                while i < n and bold[i]:
-                    result.append(s[i])
+        string_builder = []
+        while i < len(s):
+            if bold_status[i]:
+                string_builder.append("<b>")
+                
+                while i < len(s) and bold_status[i]:
+                    string_builder.append(s[i])
                     i += 1
-                result.append("</b>")
+                string_builder.append("</b>")
             else:
-                # Non-bold character
-                result.append(s[i])
+                string_builder.append(s[i])
                 i += 1
         
-        return "".join(result)
-
+        return "".join(string_builder)
 
 
         
