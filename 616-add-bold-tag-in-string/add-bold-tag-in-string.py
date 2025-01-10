@@ -1,29 +1,27 @@
 class Solution:
     def addBoldTag(self, s: str, words: List[str]) -> str:
-        bold_status = [False]*len(s)
+        n = len(s)
+        bold = [False] * n
+        
         for word in words:
             start = s.find(word)
-            length = len(word)
             while start != -1:
-                for i in range(start, start + length):
-                    bold_status[i] = True
-                start = s.find(word, start+1)
+                for i in range(start, start + len(word)):
+                    bold[i] = True
+                    
+                start = s.find(word, start + 1)
+
+        open_tag = "<b>"
+        close_tag = "</b>"
+        ans = []
         
-        i = 0
-        string_builder = []
-        while i < len(s):
-            if bold_status[i]:
-                string_builder.append("<b>")
+        for i in range(n):
+            if bold[i] and (i == 0 or not bold[i - 1]):
+                ans.append(open_tag)
                 
-                while i < len(s) and bold_status[i]:
-                    string_builder.append(s[i])
-                    i += 1
-                string_builder.append("</b>")
-            else:
-                string_builder.append(s[i])
-                i += 1
+            ans.append(s[i])
+            
+            if bold[i] and (i == n - 1 or not bold[i + 1]):
+                ans.append(close_tag)
         
-        return "".join(string_builder)
-
-
-        
+        return "".join(ans)
