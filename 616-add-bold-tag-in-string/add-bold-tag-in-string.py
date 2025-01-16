@@ -10,13 +10,12 @@ class Solution:
                 start = s.find(word,start+1)
         open_tag = '<b>'
         close_tag = '</b>'
-        result = []        
-        for i in range(len(s)):
+        result = []
+        for i in range(n):
             if bold_status[i] and (i==0 or not bold_status[i-1]):
                 result.append(open_tag)
             result.append(s[i])
-            if bold_status[i] and(i==n-1 or not bold_status[i+1]):
+            if bold_status[i] and (i==n-1 or not bold_status[i+1]):
                 result.append(close_tag)
         return ''.join(result)
 
-        
