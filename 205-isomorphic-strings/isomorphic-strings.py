@@ -2,8 +2,7 @@ class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         mapTS = {}
         mapST = {}
-        for i in range(len(s)):
-            c1,c2 = s[i],t[i]
+        for c1,c2 in zip(s,t):
             if ((c1 in mapTS and mapTS[c1] != c2) or (c2 in mapST and mapST[c2]!=c1)):
                 return False
             mapTS[c1] = c2
