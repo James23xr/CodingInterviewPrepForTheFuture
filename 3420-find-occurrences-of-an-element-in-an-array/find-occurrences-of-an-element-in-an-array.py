@@ -1,19 +1,11 @@
 class Solution:
     def occurrencesOfElement(self, nums: List[int], queries: List[int], x: int) -> List[int]:
-        occurences = [-1] * len(nums)
+        indices = [i for i,val in enumerate(nums) if val ==x]
         res = []
-        curr_point = 0
-        for i in range(len(nums)):
-            if nums[i] == x:
-                occurences[curr_point] = i
-                curr_point +=1
-        for i in range(len(queries)):
-            point = queries[i] -1
-            if point >= len(occurences):
+        for q in queries:
+            if q > len(indices):
                 res.append(-1)
             else:
-                res.append(occurences[point])
+                res.append(indices[q-1])
         return res
-
-
         
