@@ -6,4 +6,5 @@ class Solution:
             key = ''.join(sorted(word))
             groups[key].append(word)
         return list(groups.values())
+
         
