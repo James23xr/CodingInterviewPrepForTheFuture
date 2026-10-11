@@ -6,5 +6,4 @@ class Solution:
             if need in seen:
                 return [i,seen[need]]
             seen[num] = i
-            
         
