@@ -1,10 +1,10 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
         seen = {}
-        for i,e in enumerate(nums):
-            diff = target - e
-            if diff in seen:
-                return [seen[diff],i]
-            seen[e] = i
-        
+        for i, num in enumerate(nums):
+            need = target - num
+            if need in seen:
+                return [i,seen[need]]
+            seen[num] = i
+            
         
